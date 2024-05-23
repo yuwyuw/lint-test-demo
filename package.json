@@ -19,7 +19,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": "eslint --format stylish --max-warnings=0"
+    "*.{js,jsx,ts,tsx}, */x/x.{js,jsx,ts,tsx}": "eslint --format stylish --max-warnings=0"
   },
   "author": "",
   "license": "ISC",

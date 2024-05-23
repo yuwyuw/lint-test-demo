@@ -5,7 +5,7 @@ interface InfoProps {
 }
 
 const Test: FC<InfoProps> = (props) => {
-  ggg();
+  ggg11();
   return (<div>hello world </div>)
 } 
 export default Test;
