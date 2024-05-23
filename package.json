@@ -18,6 +18,9 @@
       "pre-push": "npm test"
     }
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --format stylish --max-warnings=0"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -35,11 +38,5 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  },
-  "lint-staged": {
-    "*.ts": "eslint",
-    "*.tsx": "eslint",
-    "*/*/*/*.tsx": "eslint",
-    "*.md": "prettier --list-different"
   }
 }
