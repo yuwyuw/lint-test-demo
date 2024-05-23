@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint . --format stylish",
+    "lint": "eslint . --fix",
     "prepare": "husky install"
   },
   "workspaces": [
@@ -19,7 +19,8 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}, */x/x.{js,jsx,ts,tsx}": "eslint --format stylish --max-warnings=0"
+    "*.{js,jsx,ts,tsx}": "eslint --fix ",
+    "*/x/x.{js,jsx,ts,tsx}": "eslint --fix"
   },
   "author": "",
   "license": "ISC",
