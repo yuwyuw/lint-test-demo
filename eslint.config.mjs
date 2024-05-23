@@ -8,8 +8,9 @@ export default [
   ...fixupConfigRules(pluginReactConfig),
   {
     rules: {
-        "no-unused-vars": "2",
-        "no-undef": "2"
-    }
-}   
+        "no-unused-vars": "error",
+        "no-undef": "error",
+    },
+    ignores: ["build/", "*.temp.js", "commitlint.config.js", "config/*"],
+  }
 ];
