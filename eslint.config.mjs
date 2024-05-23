@@ -8,8 +8,8 @@ export default [
   ...fixupConfigRules(pluginReactConfig),
   {
     rules: {
-        "no-unused-vars": "warn",
-        "no-undef": "warn"
+        "no-unused-vars": "2",
+        "no-undef": "2"
     }
 }   
 ];
