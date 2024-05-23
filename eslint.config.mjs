@@ -10,11 +10,15 @@ export default [
   ...tseslint.configs.recommended,
   ...fixupConfigRules(pluginReactConfig),
   {
-    ignores: ["**/*.config.js", 'commitlint.config.js'],
+    ignores: [
+      "*.config.*", 
+      "commitlint.config.js",
+      "node_modules/**/*"
+    ],
     rules: {
       semi: "error",
       "prefer-const": "error",
       "no-undef": "error",
-    }
+    },
   }
 ];

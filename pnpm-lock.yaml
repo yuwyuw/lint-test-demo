@@ -32,6 +32,9 @@ importers:
       husky:
         specifier: ^9.0.11
         version: 9.0.11
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
       typescript-eslint:
         specifier: ^7.10.0
         version: 7.10.0(eslint@9.3.0)(typescript@5.4.5)
@@ -1065,6 +1068,11 @@ packages:
   prelude-ls@1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+
+  prettier@3.2.5:
+    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+    engines: {node: '>=14'}
+    hasBin: true
 
   prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
@@ -2529,6 +2537,8 @@ snapshots:
   possible-typed-array-names@1.0.0: {}
 
   prelude-ls@1.2.1: {}
+
+  prettier@3.2.5: {}
 
   prop-types@15.8.1:
     dependencies:
