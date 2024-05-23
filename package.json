@@ -16,14 +16,17 @@
   "lint-staged": {
     "*.js, .eslintignore": [
       "eslint --fix",
+      "git add",
       "prettier --write"
     ],
     "*.ts, .eslintignore": [
       "eslint --fix",
+      "git add",
       "prettier --write"
     ],
     "*.tsx, .eslintignore": [
       "eslint --fix",
+      "git add",
       "prettier --write"
     ]
   },
