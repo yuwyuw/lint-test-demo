@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky",
-    "lint": "eslint src"
+    "prepare": "husky"
   },
   "husky": {
     "hooks": {
@@ -14,22 +13,30 @@
     }
   },
   "lint-staged": {
-    "*.js, .eslintignore": [
+    "*.ts": [
       "eslint --fix",
-      "git add",
       "prettier --write"
     ],
-    "*.ts, .eslintignore": [
+    "*.tsx": [
       "eslint --fix",
-      "git add",
-      "prettier --write"
-    ],
-    "*.tsx, .eslintignore": [
-      "eslint --fix",
-      "git add",
-      "prettier --write"
+      "prettier --write",
+      "eslint"
     ]
   },
+  "ignores": [
+    "commitlint.config.js",
+    ".eslintrc.js",
+    "node_modules/**/*",
+    "node_modules/**/**",
+    "**/node_modules/"
+  ],
+  "eslintIgnore": [
+    "commitlint.config.js",
+    ".eslintrc.js",
+    "node_modules/**/*",
+    "node_modules/**/**",
+    "**/node_modules/"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -42,7 +49,10 @@
     "eslint-plugin-react": "^7.34.1",
     "globals": "^15.3.0",
     "husky": "^9.0.11",
-    "prettier": "^3.2.5",
     "typescript-eslint": "^7.10.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }
