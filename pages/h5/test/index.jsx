@@ -1,12 +1,11 @@
-import React from 'react';
+import React,{ FC } from 'react';
 
 
-const MyComponent = () => {
+
+export default function MyApp() {
   return (
     <div>
-     hello world!
+      <h1>Welcome to my app</h1>
     </div>
   );
-};
-
-export default MyComponent;
+}
