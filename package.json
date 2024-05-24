@@ -17,7 +17,7 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "*.tsx": [
+    "*.tsx":  [
       "eslint --fix",
       "prettier --write",
       "eslint"
