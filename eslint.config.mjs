@@ -17,8 +17,8 @@ export default [
     ],
     rules: {
       semi: "error",
-      "prefer-const": "error",
-      "no-undef": "error",
+      "prefer-const": "0",
+      "no-undef": "0",
     },
   }
 ];

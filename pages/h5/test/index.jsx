@@ -1,4 +1,12 @@
-const test = function () {
-  console.log('hello world')
-}
-export default test();
+import React from 'react';
+
+
+const MyComponent = () => {
+  return (
+    <div>
+     hello world!
+    </div>
+  );
+};
+
+export default MyComponent;
