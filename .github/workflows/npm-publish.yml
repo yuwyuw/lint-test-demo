@@ -31,6 +31,11 @@ jobs:
       env: # More info about the environment variables in the README
         GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} # Leave this as is, it's automatically generated
         NPM_AUTH_TOKEN: ${{ secrets.lemon_test1111 }} # You need to set this in your repo settings
+    - uses: pnpm/action-setup@v4
+      name: Install pnpm
+      with:
+        version: 8
+        run_install: false
   build:
     runs-on: ubuntu-latest
     steps:
@@ -38,7 +43,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm i pnpm && pnpm ci
+      - run: pnpm ci
       - run: pnpm test
 
   publish-npm:
