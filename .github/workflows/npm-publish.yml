@@ -51,6 +51,13 @@ jobs:
       - name: Build package
         run:  pnpm recursive run build
 
+      - name: Commit Changes
+        run: |
+          git config user.name "Lemon"
+          git config user.email "2429168074@qq.com"
+          git add .
+          git commit -m "Commit message"
+
       - name: Publish package to npm
         run: pnpm recursive publish --access public
         env:
