@@ -27,8 +27,8 @@ jobs:
         run: npm install -g pnpm   
       - name: Install dependencies
         run:  pnpm recursive install
-      - name: Install semver
-        run: pnpm install -g semver 
+      # - name: Install semver
+      #   run: pnpm install -g semver 
 
       # - name: Update Package Versions
       #   run: |
