@@ -53,10 +53,10 @@ jobs:
 
       - name: Commit Changes
         run: |
-          git config user.name "Lemon"
+          git config user.name "Lemon_dev"
           git config user.email "2429168074@qq.com"
           git add .
-          git commit -m "Commit message"
+          git commit -m "build: 【ci自动化发布】"
 
       - name: Publish package to npm
         run: pnpm recursive publish --access public
