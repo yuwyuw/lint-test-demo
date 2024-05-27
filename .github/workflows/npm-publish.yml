@@ -24,29 +24,29 @@ jobs:
           node-version: 18
 
       - name: Install pnpm
-        run: npm install -g pnpm
-      - name: Install semver
-        run: npm install -g semver    
+        run: npm install -g pnpm   
       - name: Install dependencies
         run:  pnpm recursive install
+      - name: Install semver
+        run: pnpm install -g semver 
 
-      - name: Update Package Versions
-        run: |
-          # 获取所有子包的路径
-          packages=$(find . -name "package.json" -not -path "*/node_modules/*")
+      # - name: Update Package Versions
+      #   run: |
+      #     # 获取所有子包的路径
+      #     packages=$(find . -name "package.json" -not -path "*/node_modules/*")
 
-          # 遍历每个子包，更新版本号
-          for package in $packages; do
-            # 获取当前包的版本号
-            current_version=$(jq -r '.version' $package)
+      #     # 遍历每个子包，更新版本号
+      #     for package in $packages; do
+      #       # 获取当前包的版本号
+      #       current_version=$(jq -r '.version' $package)
 
-            # 增加版本号
-            updated_version=$(node -p "require('semver').inc('$current_version', 'patch')")
+      #       # 增加版本号
+      #       updated_version=$(node -p "require('semver').inc('$current_version', 'patch')")
             
-            # 更新版本号到 package.json 文件
-            jq --arg updated_version "$updated_version" '.version = $updated_version' $package > tmpfile
-            mv tmpfile $package
-          done
+      #       # 更新版本号到 package.json 文件
+      #       jq --arg updated_version "$updated_version" '.version = $updated_version' $package > tmpfile
+      #       mv tmpfile $package
+      #     done
 
       - name: Build package
         run:  pnpm recursive run build
