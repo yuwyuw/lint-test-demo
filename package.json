@@ -25,6 +25,7 @@
     ]
   },
   "ignores": [
+    "*.package.json",
     "**/*/rollup.config.mjs",
     "commitlint.config.js",
     ".eslintrc.js",
